@@ -39,11 +39,12 @@ h1{
 }
 
 .profile_pic{
-    width: 15em;
+    width: 30em;
     height: 27em;
     margin: 20px;
     padding-top: 10px;
     border-radius: 25px;
+
 }
 
 .AMtext{
