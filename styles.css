@@ -7,7 +7,7 @@
 body {
     background: #f5f6f7;
     color: #1b1b32;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Helvetica;
     margin: 0;
     height:100%;
 }
@@ -39,7 +39,8 @@ h1{
 }
 
 .profile_pic{
-    width: 30%;
+    width: 15em;
+    height: 27em;
     margin: 20px;
     padding-top: 10px;
     border-radius: 25px;
