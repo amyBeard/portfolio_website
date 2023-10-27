@@ -54,16 +54,18 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     
-        const numShapes = 200; // Number of circular abstract shapes
+        const numShapes = 10; // Number of large overlapping circles
+        const maxSize = 600; // Maximum size for the circles
+        const colors = ["#0074D9", "#5A3B21", "#64A455", "#1F8B9E", "#DDC55A", "#82D0DE"];
     
-        function createShape(x, y, radius, color) {
+        function createCircle(x, y, radius, color) {
             return { x, y, radius, color };
         }
     
-        function drawShape(shape) {
+        function drawCircle(circle) {
             ctx.beginPath();
-            ctx.arc(shape.x, shape.y, shape.radius, 0, Math.PI * 2);
-            ctx.fillStyle = shape.color;
+            ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+            ctx.fillStyle = circle.color;
             ctx.fill();
         }
     
@@ -71,32 +73,28 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
     
             for (let i = 0; i < numShapes; i++) {
-                const shape = circularShapes[i];
-                shape.y = (shape.y + 1) % canvas.height; // Adjust the vertical speed
-                drawShape(shape);
+                const circle = circles[i];
+                drawCircle(circle);
             }
     
             requestAnimationFrame(animate);
         }
     
-        // Initialize circular abstract shapes with cool and complementary colors
-        const circularShapes = [];
+        // Initialize large overlapping circles with the provided color scheme
+        const circles = [];
+        
         for (let i = 0; i < numShapes; i++) {
             const x = Math.random() * canvas.width;
             const y = Math.random() * canvas.height;
-            const radius = Math.random() * 30 + 10;
+            const radius = maxSize;
     
-            // Use shades of blue and green for cool and complementary colors
-            const color = `rgba(${Math.random() * 75}, ${Math.random() * 100 + 100}, ${Math.random() * 100 + 100}, 0.7)`;
+            const color = colors[i % colors.length];
     
-            circularShapes.push(createShape(x, y, radius, color));
+            circles.push(createCircle(x, y, radius, color));
         }
     
         animate();
     </script>
-    
-    
-    
     
     
 </body>
