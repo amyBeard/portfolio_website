@@ -1,134 +1,137 @@
-@media (prefers-reduced-motion: no-preference) {
+    /* Reset some default browser styles */
     * {
-      scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-}
-
-body {
-    background: #f5f6f7;
-    color: #1b1b32;
-    font-family: Helvetica;
-    margin: 0;
-    height:100%;
-}
-
-header {
-    background: #d3d3d3;
-    width: 100%;
-    height: 5em;
-    margin: 0;
-    position: fixed;
-    z-index: 99;
-    display: flex;
-}
-
-header > h1{
-    margin: 0.6em 20px 0 20px;
-}
-#features {
-    margin-top: 30px;
-}
-
-nav > ul{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-}
-
-nav > ul > li {
-    list-style: none;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-    display: block;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-.welcome{
-    background: #d3d3d3;
-    width: 80%;
-    height: 30em;
-    left: 10%;
-    top: 15%;
-    position: absolute;
-    z-index: 1;
-    border-radius: 25px;
-    display: grid;
     
-}
+    /* Apply smooth scrolling to all elements */
+    @media (prefers-reduced-motion: no-preference) {
+        * {
+        scroll-behavior: smooth;
+        }
+    }
+    
+    /* Global styles */
+    body {
+        font-family: "Helvetica", Arial, sans-serif;
+        background: #f5f5f5;
+        color: #1b1b32;
+        margin: 0;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    /* Header styles */
+    header {
+        background: #cccccc92;
+        width: 100%;
+        height: 5em;
+        margin: 0;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        top: 0; /* Adjust the top value to position it higher on the page */
+    }
 
-.welcome > h1{
-    text-align: center;
-    margin-top: 10%;
-    font-size: 5em;
-}
+    header > h1 {
+        margin: 0.6em 20px 0 20px;
+    }
 
-.about{
-    background: #d3d3d3;
-    width: 80%;
-    height: 30em;
-    left: 10%;
-    top: 45%;
-    position: absolute;
-    z-index: 1;
-    border-radius: 25px;
-    overflow: scroll;
-    display: flex;
-}
+    #features {
+        margin-top: 30px;
+    }
 
-.profile_pic{
-    width: 30em;
-    height: 27em;
-    margin: 20px;
-    padding-top: 10px;
-    border-radius: 25px;
-}
+    nav > ul{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-inline-start: 0;
+        margin-block: 0;
+        height: 100%;
+    }
 
-.AMtext{
-    overflow: scroll;
-    display: grid;
-    padding: 20px 20px 0 0;
-    align-content: start;
-}
+    nav > ul > li {
+        list-style: none;
+        margin: 0 0.2rem;
+        padding: 0.2rem;
+        display: block;
+    }
 
-.AMtext > p{
-    font-size: large;
-}
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    /* Section styles */
+    .welcome, .about {
+        background: #ffffffd0;
+        border-radius: 25px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 1200px;
+        padding: 2rem;
+    }
+    
+    .welcome h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1b1b32;
+        margin-bottom: 1rem;
+    }
 
-.resume{
-    background: #d3d3d3;
-    width: 40%;
-    height: 30em;
-    left: 10%;
-    top: 70%;
-    position: absolute;
-    z-index: 1;
-    border-radius: 25px;
-    overflow: scroll;
-    display: flex;
-}
+    .welcome p{
+        text-align: center;
+    }
+    
+    .about h2{
+        text-align: left;
+        font-size: 2.5rem;
+        color: #1b1b32;
+        margin-bottom: 1rem;
+    }
+    .about p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .profile_pic {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about {
+        width: 80%;
+        margin: 0 auto;
+        position: relative; /* Position relative to contain floated image */
+        overflow: hidden; /* Clear any floats inside */
+    }
 
-.resume-img{
-    padding-top: 25%;
-    padding-left: 10px;
-    width: 18em;
-    height: 21em;
-}
-.jsPic{
-    margin-top: 90%;
-    margin-left: 20px;
-}
+    .profile_pic {
+        float: left; /* Float the image to the left */
+        width: 30%;
+        margin-right: 20px; /* Margin to create space between image and text */
+        border-radius: 25px;
+    }
 
-.fa-sparkles{
-    top: 50em;
-    left:10em;
-    font-size: 2rem;
-    z-index: 999;
-}
+    .AMtext {
+        padding: 20px; /* Padding to create space around the text */
+    }
+        
+    .welcome {
+        border-radius: 25px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 7rem auto 2rem;
+        width: 80%;
+        max-width: 800px;
+        padding: 2rem;
+        position: relative;
+    }
+
+    
+    
