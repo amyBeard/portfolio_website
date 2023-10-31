@@ -1,6 +1,6 @@
 @media (prefers-reduced-motion: no-preference) {
     * {
-      scroll-behavior: smooth;
+        scroll-behavior: smooth;
     }
 }
 
@@ -9,7 +9,7 @@ body {
     color: #1b1b32;
     font-family: Helvetica;
     margin: 0;
-    height:100%;
+    height: 100%;
 }
 
 header {
@@ -22,15 +22,12 @@ header {
     display: flex;
 }
 
-header > a > h1{
+header > a > h1 {
     margin: 0.6em 20px 0 20px;
-
-}
-#features {
-    margin-top: 30px;
 }
 
-nav > ul{
+
+nav > ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -50,4 +47,50 @@ nav > ul > li {
 a {
     color: #000;
     text-decoration: none;
+}
+
+.projects {
+    display: grid;
+    position: relative;
+    top: 5em;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between project items */
+    padding: 20px; /* Add padding to the section if desired */
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.project p {
+    margin-top: 10px;
+}
+
+.project a {
+    display: block;
+    margin-top: 10px;
+    background-color: #1b1b32;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project a:hover {
+    background-color: #000;
 }
