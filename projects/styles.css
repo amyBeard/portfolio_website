@@ -53,7 +53,7 @@ a {
     display: grid;
     position: relative;
     top: 5em;
-    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
     gap: 20px; /* Adjust the gap between project items */
     padding: 20px; /* Add padding to the section if desired */
 }
