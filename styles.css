@@ -1,11 +1,4 @@
-    /* Reset some default browser styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* Apply smooth scrolling to all elements */
+  /* Apply smooth scrolling to all elements */
     @media (prefers-reduced-motion: no-preference) {
         * {
         scroll-behavior: smooth;
@@ -31,35 +24,46 @@
         position: fixed;
         z-index: 99;
         display: flex;
-        top: 0; /* Adjust the top value to position it higher on the page */
+        top: 0;
     }
 
-    header > h1 {
-        margin: 0.6em 20px 0 20px;
+    .title {
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
     }
 
-
-    nav > ul{
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+    nav{
+        width: 100%;
         align-items: center;
-        padding-inline-start: 0;
-        margin-block: 0;
+        margin-block: 0.2;
         height: 100%;
     }
 
-    nav > ul > li {
+    nav > ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         list-style: none;
+    }
+    nav > ul.left{
+        float:left;
+    }
+
+    nav > ul.right{
+        float:right;
+    }
+
+    nav > ul > li {
         margin: 0 0.2rem;
         padding: 0.2rem;
-        display: block;
     }
 
     a {
         color: #000;
         text-decoration: none;
     }
+    
     
     /* Section styles */
     .welcome, .about {
@@ -130,5 +134,13 @@
         position: relative;
     }
 
-    
+    .fa {
+        font-size: 2em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2em;
+    }
+        
     

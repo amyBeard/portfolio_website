@@ -5,68 +5,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Amy Beard/Projects</title>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./standardStyles.css">
+        <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <main>
             <header>
-                <a href="../index.html"><h1 class="title">Amy Beard</h1></a>
                 <nav id="nav-bar">
-                    <ul>
-                      <li><a class="nav-link" href="../RESUME/amy-beard-resume.pdf" target="_blank">Resume</a></li>
-                      <li><a class="nav-link" href="../projects/index.html">Projects</a></li>
-                      <li><a class="nav-link" href="../contact/index.html">Contact Info</a></li>
+                    <ul class= "left">
+                        <li><a class="title" href="../index.html">Amy Beard</a></li>
+                        <li><a class="nav-link" href="../RESUME/amy-beard-resume.pdf" target="_blank">Resume</a></li>
+                        <li><a class="nav-link" href="./">Projects</a></li>
                     </ul>
-                  </nav>
+                    <ul class="right">
+                        <li><a href="mailto:amybeard66@icloud.com" target="_blank"><i class="fa fa-solid fa-envelope"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/amy-beard-308a69266/" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/amyBeard" target="_blank"><i class="fa fa-brands fa-github"></i></a></li>
+                    </ul>
+                </nav>
             </header>
             <section class="projects">
                 <!-- Project Slot 1 -->
-                <div class="project">
-                    <img src="../PICS/bblocks.jpg" alt="Project 1">
+                <div class="project" id="project1">
+                    <video src="../PICS/baby_names.mp4" alt="Project 1" muted></video>
                     <h2>Canadian Baby Name Database</h2>
                     <p>A collabortive project to supply new parents with statistics on baby names in Canada over time.</p>
                     <a href="https://github.com/amyBeard/babyNames" target="_blank">Learn More</a>
                 </div>
     
                 <!-- Project Slot 2 -->
-                <div class="project">
-                    <img src="../PICS/js.png" alt="Project 2">
+                <div class="project" id="project2">
+                    <video src="../PICS/js_docs.mp4" alt="Project 2" muted></video>
                     <h2>JavaScript Documentation Page</h2>
                     <p>A simple webpage, outlining general JavaScript.</p>
                     <a href="technical_doc/index.html" target="_blank">Learn More</a>
                 </div>
     
                 <!-- Project Slot 3 -->
-                <div class="project">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h2>Project Title 3</h2>
-                    <p>Description of Project 3.</p>
-                    <a href="project3.html">Learn More</a>
+                <div class="project" id="project3">
+                    <video src="../PICS/mancala.mp4" alt="Project 3" muted></video>
+                    <h2>Mancala</h2>
+                    <p>Java-based project, replicating the board game Mancala in both a TextUI and GUI version</p>
+                    <a href="https://github.com/amyBeard/MANCALA" target="_blank">Learn More</a>
                 </div>
     
                 <!-- Project Slot 4 -->
-                <div class="project">
-                    <img src="project4.jpg" alt="Project 4">
+                <div class="project" id="project4">
+                    <video src="../PICS/project_4.mp4" alt="Project 4" muted></video>
                     <h2>Project Title 4</h2>
-                    <p>Description of Project 4.</p>
+                    <p></p>
                     <a href="project4.html">Learn More</a>
                 </div>
     
                 <!-- Project Slot 5 -->
-                <div class="project">
-                    <img src="project5.jpg" alt="Project 5">
+                <div class="project" id="project5">
+                    <video src="../PICS/project_5.mp4" alt="Project 5" muted></video>
                     <h2>Project Title 5</h2>
-                    <p>Description of Project 5.</p>
+                    <p></p>
                     <a href="project5.html">Learn More</a>
                 </div>
     
                 <!-- Project Slot 6 -->
-                <div class="project">
-                    <img src="project6.jpg" alt="Project 6">
+                <div class="project" id="project6">
+                    <video src="../PICS/project_6.mp4" alt="Project 6" muted></video>
                     <h2>Project Title 6</h2>
-                    <p>Description of Project 6.</p>
+                    <p></p>
                     <a href="project6.html">Learn More</a>
                 </div>
             </section>
+
+            <script>
+                // Play the video once the page is loaded
+                window.onload = function() {
+                    var project1Video = document.getElementById('project1').querySelector('video');
+                    var project2Video = document.getElementById('project2').querySelector('video');
+                    var project3Video = document.getElementById('project3').querySelector('video');
+                    var project4Video = document.getElementById('project4').querySelector('video');
+                    var project5Video = document.getElementById('project5').querySelector('video');
+                    var project6Video = document.getElementById('project6').querySelector('video');
+                    project1Video.play();
+                    project2Video.play();
+                    project3Video.play();
+                    project4Video.play();
+                    project5Video.play();
+                    project6Video.play();
+                    
+                };
+            </script>
+
         </main>
     </body>
 </html>
