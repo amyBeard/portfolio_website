@@ -75,14 +75,16 @@
             </section>
 
             <script>
-                // Play the video once the page is loaded
+
+                var project1Video = document.getElementById('project1').querySelector('video');
+                var project2Video = document.getElementById('project2').querySelector('video');
+                var project3Video = document.getElementById('project3').querySelector('video');
+                var project4Video = document.getElementById('project4').querySelector('video');
+                var project5Video = document.getElementById('project5').querySelector('video');
+                var project6Video = document.getElementById('project6').querySelector('video');
+
+                 // Play the video once the page is loaded
                 window.onload = function() {
-                    var project1Video = document.getElementById('project1').querySelector('video');
-                    var project2Video = document.getElementById('project2').querySelector('video');
-                    var project3Video = document.getElementById('project3').querySelector('video');
-                    var project4Video = document.getElementById('project4').querySelector('video');
-                    var project5Video = document.getElementById('project5').querySelector('video');
-                    var project6Video = document.getElementById('project6').querySelector('video');
                     project1Video.play();
                     project2Video.play();
                     project3Video.play();
@@ -91,6 +93,30 @@
                     project6Video.play();
                     
                 };
+
+  
+                /* Applying mouseover event on video clip  
+                and then we call play() function to play  
+                the video when the mouse is over the video */ 
+                project1Video.addEventListener("mouseover", function (e) { 
+                    project1Video.play(); 
+                })
+                project2Video.addEventListener("mouseover", function (e) { 
+                    project2Video.play(); 
+                }) 
+                project3Video.addEventListener("mouseover", function (e) { 
+                    project3Video.play(); 
+                }) 
+                project4Video.addEventListener("mouseover", function (e) { 
+                    project4Video.play(); 
+                }) 
+                project5Video.addEventListener("mouseover", function (e) { 
+                    project5Video.play(); 
+                }) 
+                project6Video.addEventListener("mouseover", function (e) { 
+                    project6Video.play(); 
+                })  
+                
             </script>
 
         </main>
