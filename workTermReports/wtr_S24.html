@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amy Beard</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./standardStyles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -22,27 +23,14 @@
 <body>
     <canvas id="background-animation"></canvas>
     <main>
-        <header>
-            <nav id="nav-bar">
-                <ul class= "left">
-                    <li><a class="title" href="./">Amy Beard</a></li>
-                    <li><a class="nav-link" href="RESUME/amy-beard-resume.pdf" target="_blank">Resume</a></li>
-                    <li><a class="nav-link" href="projects/index.html">Projects</a></li>
-                </ul>
-                <ul class="right">
-                    <li><a href="mailto:amybeard66@icloud.com" target="_blank"><i class="fa fa-solid fa-envelope"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/amy-beard-308a69266/" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/amyBeard" target="_blank"><i class="fa fa-brands fa-github"></i></a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="welcome">
-            <h1>Welcome To My Website</h1>
+        <div id="header"></div>
+        <div class="card">
+            <h1>Work Term Reports</h1>
             <p>This website is a work in progress, so please check back regularly for updates and improvements.</p>
             <p>(For some fun, to change the background, click 'Amy Beard' or refress the page)</p>
         </div>
         <div class="about">
-            <img class="profile_pic" src="PICS/profile_pic.jpg" alt="characicutre of Amy">
+            <img class="profile_pic" src="..//pictures/profile_pic.jpg" alt="characicutre of Amy">
             <div class="AMtext">
                 <h2>About Me</h2>
                 <p>Hello and welcome! I am Amy Beard, a 2nd year Software Engineering Student at the University of Guelph. I'm
@@ -53,52 +41,9 @@
         </div>
     </main>
     <script>
-        const canvas = document.getElementById('background-animation');
-        const ctx = canvas.getContext('2d');
-    
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    
-        const numShapes = 10; // Number of large overlapping circles
-        const maxSize = 600; // Maximum size for the circles
-        const colors = ["#00A7E6", "#5A3B21", "#7EC953", "#2182A4", "#E5B02B", "#94DE82","#E5B02B"];
-    
-        function createCircle(x, y, radius, color) {
-            return { x, y, radius, color };
-        }
-    
-        function drawCircle(circle) {
-            ctx.beginPath();
-            ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-            ctx.fillStyle = circle.color;
-            ctx.fill();
-        }
-    
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-            for (let i = 0; i < numShapes; i++) {
-                const circle = circles[i];
-                drawCircle(circle);
-            }
-    
-            requestAnimationFrame(animate);
-        }
-    
-        // Initialize large overlapping circles with the provided color scheme
-        const circles = [];
-        
-        for (let i = 0; i < numShapes; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = maxSize;
-    
-            const color = colors[i % colors.length];
-    
-            circles.push(createCircle(x, y, radius, color));
-        }
-    
-        animate();
+        $(document).ready(function() {
+            $('#header').load('../partials/nav.html');
+        });
     </script>
     
     

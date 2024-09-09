@@ -1,0 +1,29 @@
+
+    * {
+        margin: 1;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        * {
+        scroll-behavior: smooth;
+        }
+    }
+    
+    /* Global styles */
+    body {
+        font-family: "Helvetica", Arial, sans-serif;
+        color: #1b1b32;
+        margin: 0;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .nav-img img {
+        height: 12vh;
+    }
+
+    .bg-orange {
+        background-color: #ad240e !important;
+    }

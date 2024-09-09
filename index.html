@@ -4,94 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amy Beard</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./standardStyles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    </style>
 </head>
-<body>
-    <canvas id="background-animation"></canvas>
+<body class="bg-dark">
     <main>
-        <div id="header"></div>
-        <div class="welcome">
-            <h1>Welcome To My Website</h1>
-            <p>This website is a work in progress, so please check back regularly for updates and improvements.</p>
-            <p>(For some fun, to change the background, click 'Amy Beard' or refress the page)</p>
-        </div>
-        <div class="about">
-            <img class="profile_pic" src="pictures/profile_pic.jpg" alt="characicutre of Amy">
-            <div class="AMtext">
+        <div class="header"></div>
+        <div class="container bg-light" style="height: 80vh;">
+            <div class="row text-center pt-3">
+                <div class="col-3"><a class="btn bg-orange text-white" href="/">Home</a></div>
+                <div class="col-3"><a class="btn bg-orange text-white" href="./projects/index.html">Projects</a></div>
+                <div class="col-3"><a class="btn bg-orange text-white" href="/">Work Term Reports</a></div>
+                <div class="col-3"><a class="btn bg-orange text-white" href="/" target="_blank">Resume</a></div>
+            </div>
+            <div class="container py-3">
+                <h1>Welcome</h1>
                 <h2>About Me</h2>
-                <p>Hello and welcome! I am Amy Beard, a 2nd year Software Engineering Student at the University of Guelph. I'm
-                    fascinated by technology and on a continuous quest to expand my knowledge. Feel free to contact me through Email or Linkedin
-                    or check out my GitHub page, all located in the top-right corner.
-                </p>
+                <p> Hello and welcome! I am Amy Beard, a 3rd year Software Engineering Student at the University of Guelph. I'm fascinated by technology and on a continuous quest to expand my knowledge. Feel free to contact me through Email or Linkedin or check out my GitHub page, all located in the top-right corner.</p>
             </div>
         </div>
+        
     </main>
     <script>        
-        const canvas = document.getElementById('background-animation');
-        const ctx = canvas.getContext('2d');
-    
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    
-        const numShapes = 10; // Number of large overlapping circles
-        const maxSize = 600; // Maximum size for the circles
-        const colors = ["#00A7E6", "#5A3B21", "#7EC953", "#2182A4", "#E5B02B", "#94DE82","#E5B02B"];
-    
-        function createCircle(x, y, radius, color) {
-            return { x, y, radius, color };
-        }
-    
-        function drawCircle(circle) {
-            ctx.beginPath();
-            ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-            ctx.fillStyle = circle.color;
-            ctx.fill();
-        }
-    
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-            for (let i = 0; i < numShapes; i++) {
-                const circle = circles[i];
-                drawCircle(circle);
-            }
-    
-            requestAnimationFrame(animate);
-        }
-    
-        // Initialize large overlapping circles with the provided color scheme
-        const circles = [];
-        
-        for (let i = 0; i < numShapes; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            const radius = maxSize;
-    
-            const color = colors[i % colors.length];
-    
-            circles.push(createCircle(x, y, radius, color));
-        }
-    
-        animate();
 
         $(document).ready(function() {
-
-            $('#header').load('./partials/nav.html');
-            
+            $('.header').load('./partials/nav.html');
         });
         
     </script>
