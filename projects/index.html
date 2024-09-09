@@ -7,27 +7,15 @@
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="./standardStyles.css">
         <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <main>
-            <header>
-                <nav id="nav-bar">
-                    <ul class= "left">
-                        <li><a class="title" href="../">Amy Beard</a></li>
-                        <li><a class="nav-link" href="../RESUME/amy-beard-resume.pdf" target="_blank">Resume</a></li>
-                        <li><a class="nav-link" href="./">Projects</a></li>
-                    </ul>
-                    <ul class="right">
-                        <li><a href="mailto:amybeard66@icloud.com" target="_blank"><i class="fa fa-solid fa-envelope"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/amy-beard-308a69266/" target="_blank"><i class="fa fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/amyBeard" target="_blank"><i class="fa fa-brands fa-github"></i></a></li>
-                    </ul>
-                </nav>
-            </header>
+            <div id="header"></div>
             <section class="projects">
                 <!-- Project Slot 1 -->
                 <div class="project" id="project1">
-                    <video src="../PICS/baby_names.mp4" alt="Project 1" muted></video>
+                    <video src="../pictures/baby_names.mp4" alt="Project 1" muted></video>
                     <h2>Canadian Baby Name Database</h2>
                     <p>A collabortive project to supply new parents with statistics on baby names in Canada over time.</p>
                     <a href="https://github.com/amyBeard/babyNames" target="_blank">Learn More</a>
@@ -35,7 +23,7 @@
     
                 <!-- Project Slot 2 -->
                 <div class="project" id="project2">
-                    <video src="../PICS/LL_fasta.mp4" alt="Project 2" muted></video>
+                    <video src="../pictures/LL_fasta.mp4" alt="Project 2" muted></video>
                     <h2>FASTA Record Processor</h2>
                     <p>Reads and processes FASTA records and analyzes the time effeciency of arrays and linked-lists.</p>
                     <a href="https://github.com/amyBeard/LL_FASTA_RECORDS" target="_blank">Learn More</a>
@@ -43,7 +31,7 @@
     
                 <!-- Project Slot 3 -->
                 <div class="project" id="project3">
-                    <video src="../PICS/mancala.mp4" alt="Project 3" muted></video>
+                    <video src="../pictures/mancala.mp4" alt="Project 3" muted></video>
                     <h2>Mancala</h2>
                     <p>Java-based project, replicating the board game Mancala in both a TextUI and GUI version</p>
                     <a href="https://github.com/amyBeard/MANCALA" target="_blank">Learn More</a>
@@ -51,7 +39,7 @@
     
                 <!-- Project Slot 4 -->
                 <div class="project" id="project4">
-                    <video src="../PICS/js_docs.mp4" alt="Project 4" muted></video>
+                    <video src="../pictures/js_docs.mp4" alt="Project 4" muted></video>
                     <h2>JavaScript Documentation Page</h2>
                     <p>A simple webpage, outlining general JavaScript.</p>
                     <a href="technical_doc/index.html" target="_blank">Learn More</a>
@@ -59,7 +47,7 @@
     
                 <!-- Project Slot 5 -->
                 <div class="project" id="project5">
-                    <video src="../PICS/associative_arrays.mp4" alt="Project 5" muted></video>
+                    <video src="../pictures/associative_arrays.mp4" alt="Project 5" muted></video>
                     <h2>Associative Arrays</h2>
                     <p>Working with associative arrays, specifically implementing and performing operations on hash tables</p>
                     <a href="https://github.com/amyBeard/ASSOCIATIVE_ARRAYS" target="_blank">Learn More</a>
@@ -67,7 +55,7 @@
     
                 <!-- Project Slot 6 -->
                 <div class="project" id="project6">
-                    <video src="../PICS/project_6.mp4" alt="Project 6" muted></video>
+                    <video src="../pictures/project_6.mp4" alt="Project 6" muted></video>
                     <h2>Project Title 6</h2>
                     <p></p>
                    <!-- <a href="">Learn More</a> --->
@@ -76,6 +64,7 @@
 
             <script>
 
+                
                 var project1Video = document.getElementById('project1').querySelector('video');
                 var project2Video = document.getElementById('project2').querySelector('video');
                 var project3Video = document.getElementById('project3').querySelector('video');
@@ -116,6 +105,10 @@
                     project6Video.play(); 
                 })  
                 
+                
+                $(document).ready(function() {
+                    $('#header').load('../partials/nav.html');
+                });
             </script>
 
         </main>
