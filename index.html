@@ -12,7 +12,26 @@
 </head>
 <body class="bg-dark">
     <main>
-        <div class="header"></div>
+        <div class="header">
+            <nav class="navbar navbar-light bg-dark bg-gradiant">
+                <div class="container-fluid">
+                  <a class="navbar-brand nav-img" href="/"><img src="./pictures/amy-beard-logo.png" alt="amy-beard-logo"></a>
+                  <div class="d-flex justify-content-between text-light" style="font-size:4vh;">
+                    <div class = "row">
+                      <div class="col mx-2">
+                        <a href="mailto:amybeard66@icloud.com" target="_blank"><i class="fa-solid fa-envelope text-light"></i></a>
+                      </div>
+                      <div class="col mx-2">
+                        <a href="https://www.linkedin.com/in/amy-beard-308a69266/" target="_blank"><i class="fa fa-linkedin text-light"></i></a>
+                      </div>
+                      <div class="col mx-2">
+                        <a href="https://github.com/amyBeard" target="_blank"><i class="fa fa-github text-light"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
         <div class="container bg-light my-3" style="height: 80vh;">
             <div class="row text-center bg-dark-green py-3">
                 <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="/">Home</a></div>
@@ -33,7 +52,6 @@
     <script>        
 
         $(document).ready(function() {
-            $('.header').load('./partials/nav.html');
         });
         
     </script>
