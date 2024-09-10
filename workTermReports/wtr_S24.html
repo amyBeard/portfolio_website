@@ -6,6 +6,7 @@
     <title>Amy Beard</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap-grid.css">
     <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
@@ -20,30 +21,100 @@
         }
     </style>
 </head>
-<body>
-    <canvas id="background-animation"></canvas>
+<body class="bg-dark">
     <main>
-        <div id="header"></div>
-        <div class="card">
-            <h1>Work Term Reports</h1>
-            <p>This website is a work in progress, so please check back regularly for updates and improvements.</p>
-            <p>(For some fun, to change the background, click 'Amy Beard' or refress the page)</p>
-        </div>
-        <div class="about">
-            <img class="profile_pic" src="..//pictures/profile_pic.jpg" alt="characicutre of Amy">
-            <div class="AMtext">
-                <h2>About Me</h2>
-                <p>Hello and welcome! I am Amy Beard, a 2nd year Software Engineering Student at the University of Guelph. I'm
-                    fascinated by technology and on a continuous quest to expand my knowledge. Feel free to contact me through Email or Linkedin
-                    or check out my GitHub page, all located in the top-right corner.
-                </p>
+        <div class="header"></div>
+        <div class="container bg-light my-3" style="height: 80vh;">
+            <div class="row text-center bg-dark-green py-3">
+                <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="/">Home</a></div>
+                <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="./projects/index.html">Projects</a></div>
+                <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="/">Work Term Reports</a></div>
+                <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="./resume/amy-beard-resume.pdf" target="_blank">Resume</a></div>
+            </div>
+            <div class="content container pt-4" style="height: 85%;">
+                <h1>Work Term Reports</h1>
+                <h2>Summer 2024</h2>
+                <div class="card mb-4">
+                    <h5 class="card-header bg-orange text-white">Avatara Software</h5>
+                    <div class="card-body">
+                        <!-- <p>Avatara Software is a software development company focusing on web-based
+                            management systems primarily for Canada's labour and nuclear industries. Their
+                            systems offer solutions to these unions and businesses that are tailor-made to their
+                            specific requirements. With only 4 full-time employees, this company has had an
+                            impressive impact on the market, taking on massive clients such as Black & McDonald,
+                            the IBEW, and E.S. Fox Ltd. As a small company, they’ve made their name in this
+                            industry through their ability to form close relationships with their clients and deliver
+                            functional, effective products consistently and quickly.</p>
+                        <p>
+                            Avatara Software primarily focuses on four types of software systems; quality
+                            management, training compliance management, market recovery/STAB, and apprentice
+                            management. Avatara creates custom web management tools to help its clients simplify
+                            and organize their current systems. Their goal is to make the lives and jobs of their
+                            clients easier through these well-made, easy-to-use systems.
+                        </p>
+                        <p>
+                            What sets Avatara apart from the rest is its client-based approach to its development
+                            process. Not only acknowledging what the customer wants but fully comprehending the
+                            problem the client has, allows the company to better understand the implicit needs of
+                            their customers. This allows them to create incredibly tailored solutions that are intuitive
+                            to the user. Furthermore, their process of constantly returning to the client during
+                            development and receiving their input to improve the product further aids in creating an
+                            end-product the client loves.
+                        </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header bg-orange text-white">My Role & Experience</h5>
+                    <div class="card-body">
+                        <!-- <p>As a full-stack developer, this term I worked on an array of different projects,
+                            continuously switching from back-end to front-end. As an introductory project, I worked
+                            with another co-op student to update the company’s in-house, time-tracking software
+                            to a new PHP framework. This project allowed me to simultaneously learn Laravel,
+                            MySQL, and Codeigniter while learning about the company’s development standards
+                            and best practices. As work on that project slowed, I was pulled into numerous other
+                            projects ranging from action-tracking systems for Black and McDonald to a materials
+                            management system for E.S. Fox Ltd.</p>
+                        <p>
+                            However, my primary focus this term was on an apprentice tracking system for IBEW
+                            Local 586. The goal of this project was to provide a new user interface for the
+                            apprentices to view their progress, as well as incorporate a new apprentice stream into
+                            their pre-existing system. My main contribution to this project was the front-end portion
+                            of the new UI for the apprentices. I was tasked with building new pages where the
+                            apprentices could log in to view their data and progress within their respective streams.
+                            This project allowed me to further my understanding of the MVC design structure, as
+                            well as front-end packages like Bootstrap 5 and jQuery. This project helped me to refine
+                            my pre-existing front-end development skills and later gain more experience with back-
+                            end development.
+                        </p>
+                        <p>
+                            Throughout this term, I gained valuable insights into the company’s business. Working
+                            on the time-tracking software and engaging with colleagues at conventions helped me
+                            understand how the business operates and what drives its success. Avatara’s ability to
+                            build lasting relationships with clients has allowed their business to prosper, thanks to
+                            its reputation and reliability. It was incredible to witness clients enthusiastically promote
+                            Avatara’s systems to their peers at conventions, almost as if they were pitching the
+                            product themselves. This experience highlighted for me not only the importance of
+                            creating effective systems but also how strong, meaningful relationships with clients are
+                            key to sustained business growth.
+                        </p>
+                        <p>
+                            In all, this first term with Avatara has been incredibly informative, allowing me to learn
+                            and develop so many unique skills I would have never gained elsewhere. I’m excited for
+                            the opportunity to continue learning here and to take on new challenges that will help
+                            me grow even further.
+                        </p> -->
+                    </div>
+                </div>
             </div>
         </div>
+        
     </main>
-    <script>
+    <script>        
+
         $(document).ready(function() {
-            $('#header').load('../partials/nav.html');
+            $('.header').load('../partials/nav.html');
         });
+        
     </script>
     
     

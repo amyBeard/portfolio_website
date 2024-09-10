@@ -4,113 +4,66 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Amy Beard/Projects</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../styles/styles.css">
         <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap-grid.css">
         <script src="https://kit.fontawesome.com/88d39c88be.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body class="bg-dark">
         <main>
-            <div id="header"></div>
-            <section class="projects">
-                <!-- Project Slot 1 -->
-                <div class="project" id="project1">
-                    <video src="../pictures/baby_names.mp4" alt="Project 1" muted></video>
-                    <h2>Canadian Baby Name Database</h2>
-                    <p>A collabortive project to supply new parents with statistics on baby names in Canada over time.</p>
-                    <a href="https://github.com/amyBeard/babyNames" target="_blank">Learn More</a>
+            <div class="header"></div>
+            <div class="container bg-white my-3" style="height: 80vh;">
+                <div class="row text-center bg-dark-green py-3">
+                    <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="/">Home</a></div>
+                    <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="./projects/index.html">Projects</a></div>
+                    <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="/">Work Term Reports</a></div>
+                    <div class="col-3"><a class="btn btn-exp bg-orange text-white" href="../resume/amy-beard-resume.pdf" target="_blank">Resume</a></div>
                 </div>
-    
-                <!-- Project Slot 2 -->
-                <div class="project" id="project2">
-                    <video src="../pictures/LL_fasta.mp4" alt="Project 2" muted></video>
-                    <h2>FASTA Record Processor</h2>
-                    <p>Reads and processes FASTA records and analyzes the time effeciency of arrays and linked-lists.</p>
-                    <a href="https://github.com/amyBeard/LL_FASTA_RECORDS" target="_blank">Learn More</a>
+                <div class="container bg-light py-4">
+                    <h1 class="mb-4">Projects</h1>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="project-card">
+                                <h5 class="card-header bg-dark-green text-white">Canadian Baby Names Database</h5>
+                                <div class="card-body">A collabortive project to supply new parents with statistics on baby names in Canada over time.</div>
+                                <a href="https://github.com/amyBeard/babyNames" target="_blank" class="card-footer btn">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="project-card">
+                                <h5 class="card-header bg-dark-green text-white">FASTA Record Processor</h5>
+                                <div class="card-body">Reads and processes FASTA records and analyzes the time effeciency of arrays and linked-lists.</div>
+                                <a href="https://github.com/amyBeard/LL_FASTA_RECORDS" target="_blank" class="card-footer btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="project-card">
+                                <h5 class="card-header bg-dark-green text-white">Mancala</h5>
+                                <div class="card-body">Java-based project, replicating the board game Mancala in both a TextUI and GUI version</div>
+                                <a href="https://github.com/amyBeard/MANCALA" target="_blank" class="card-footer btn">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="project-card">
+                                <h5 class="card-header bg-dark-green text-white">Associative Arrays</h5>
+                                <div class="card-body">Working with associative arrays, specifically implementing and performing operations on hash tables</div>
+                                <a href="https://github.com/amyBeard/ASSOCIATIVE_ARRAYS" target="_blank" class="card-footer btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
-                <!-- Project Slot 3 -->
-                <div class="project" id="project3">
-                    <video src="../pictures/mancala.mp4" alt="Project 3" muted></video>
-                    <h2>Mancala</h2>
-                    <p>Java-based project, replicating the board game Mancala in both a TextUI and GUI version</p>
-                    <a href="https://github.com/amyBeard/MANCALA" target="_blank">Learn More</a>
-                </div>
-    
-                <!-- Project Slot 4 -->
-                <div class="project" id="project4">
-                    <video src="../pictures/js_docs.mp4" alt="Project 4" muted></video>
-                    <h2>JavaScript Documentation Page</h2>
-                    <p>A simple webpage, outlining general JavaScript.</p>
-                    <a href="technical_doc/index.html" target="_blank">Learn More</a>
-                </div>
-    
-                <!-- Project Slot 5 -->
-                <div class="project" id="project5">
-                    <video src="../pictures/associative_arrays.mp4" alt="Project 5" muted></video>
-                    <h2>Associative Arrays</h2>
-                    <p>Working with associative arrays, specifically implementing and performing operations on hash tables</p>
-                    <a href="https://github.com/amyBeard/ASSOCIATIVE_ARRAYS" target="_blank">Learn More</a>
-                </div>
-    
-                <!-- Project Slot 6 -->
-                <div class="project" id="project6">
-                    <video src="../pictures/project_6.mp4" alt="Project 6" muted></video>
-                    <h2>Project Title 6</h2>
-                    <p></p>
-                   <!-- <a href="">Learn More</a> --->
-                </div>
-            </section>
-
-            <script>
-
-                
-                var project1Video = document.getElementById('project1').querySelector('video');
-                var project2Video = document.getElementById('project2').querySelector('video');
-                var project3Video = document.getElementById('project3').querySelector('video');
-                var project4Video = document.getElementById('project4').querySelector('video');
-                var project5Video = document.getElementById('project5').querySelector('video');
-                var project6Video = document.getElementById('project6').querySelector('video');
-
-                 // Play the video once the page is loaded
-                window.onload = function() {
-                    project1Video.play();
-                    project2Video.play();
-                    project3Video.play();
-                    project4Video.play();
-                    project5Video.play();
-                    project6Video.play();
-                    
-                };
-
-                /* Applying mouseover event on video clip  
-                and then we call play() function to play  
-                the video when the mouse is over the video */ 
-                project1Video.addEventListener("mouseover", function (e) { 
-                    project1Video.play();
-                })
-                project2Video.addEventListener("mouseover", function (e) { 
-                    project2Video.play(); 
-                }) 
-                project3Video.addEventListener("mouseover", function (e) { 
-                    project3Video.play(); 
-                }) 
-                project4Video.addEventListener("mouseover", function (e) { 
-                    project4Video.play(); 
-                }) 
-                project5Video.addEventListener("mouseover", function (e) { 
-                    project5Video.play(); 
-                }) 
-                project6Video.addEventListener("mouseover", function (e) { 
-                    project6Video.play(); 
-                })  
-                
-                
-                $(document).ready(function() {
-                    $('#header').load('../partials/nav.html');
-                });
-            </script>
-
+            </div>
+            
         </main>
+        <script>
+            
+            $(document).ready(function() {
+                $('.header').load('../partials/nav.html');
+            });
+        </script>
+
     </body>
 </html>

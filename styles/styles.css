@@ -27,3 +27,33 @@
     .bg-orange {
         background-color: #ad240e !important;
     }
+
+    .bg-dark-green {
+        background-color: #25492b !important;
+    }
+
+    .project-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0;
+      }
+
+      .btn-exp {
+        width: 100%;
+      }
+
+      main {
+        background-image: url('../pictures/background.png');
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+
+      .content {
+        overflow: auto;
+      }
