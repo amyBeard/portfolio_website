@@ -48,12 +48,6 @@
         width: 100%;
       }
 
-      main {
-        background-image: url('../pictures/background.png');
-        background-repeat: no-repeat;
-        height: 100vh;
-      }
-
       .content {
         overflow: auto;
       }
