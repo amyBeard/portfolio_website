@@ -75,8 +75,11 @@
                             <input type="radio" class="btn-check" name="btnradio" id="btnF24" autocomplete="off">
                             <label class="btn btn-outline-dark" for="btnF24">Fall 2024</label>
 
-                            <input type="radio" class="btn-check" name="btnradio" id="btnS25" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnS25" autocomplete="off">
                             <label class="btn btn-outline-dark" for="btnS25">Summer 2025</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnW26" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark" for="btnW26">Winter 2026</label>
                         </div>
                         
                     </div>
@@ -175,7 +178,7 @@
                                 I’m excited to continue collaborating with such talented individuals and look forward to what the future holds.
                             </p>
                         </div>
-                        <div class="summer-2025-wtr">
+                        <div class="summer-2025-wtr" style="display:none">
                             <h5>Summer 2025</h5>
                             <p>
                                 This summer I completed my third full-stack developer co-op with Avatara
@@ -275,6 +278,103 @@
                                 sustainable.
                             </p>
                         </div>
+                        <div class="winter-2026-wtr">
+                            <h5>Winter 2026</h5>
+
+                            <p>
+                                This semester I completed my second full year with Avatara Software where I 
+                                continued to expand both the technical depth of my work and
+                                the level of responsibility I was trusted with. Working
+                                as a full-stack developer on a small team meant contributing across
+                                every layer of development, from backend architecture and database logic to
+                                interactive frontend interfaces and maanging client relationships. Throughout
+                                the term, I worked on several large-scale projects and shared company
+                                packages that challenged me to think more critically about maintainability,
+                                scalability, and usability.
+                            </p>
+
+                            <p>
+                                One of the primary projects I contributed to this semester was a project
+                                management module for a large construction company operating within the
+                                Canadian nuclear industry. This work involved developing complex frontend
+                                management tools and interactive displays that allowed users to navigate and
+                                monitor large amounts of project and forecasting data in real time. Building
+                                these interfaces pushed me to think carefully about how to present highly
+                                technical information in a way that remained intuitive and responsive for
+                                users.
+                            </p>
+
+                            <p>
+                                On the backend side of this project, I worked extensively with complex grid
+                                and tree-based data structures that were used to organize financial
+                                forecasting information. This introduced me to more advanced approaches for
+                                handling large interconnected datasets and required a much deeper level of
+                                analytical thinking than many of the projects I had worked on previously.
+                                Much of the challenge came not only from implementing features, but from
+                                fully understanding the relationships between different pieces of data and
+                                ensuring they remained accurate and performant throughout the system.
+                                Throughout development, I also focused heavily on writing the backend in a
+                                reusable and scalable way to improve maintainability and ease of
+                                understanding. Rather than creating many highly specific functions, I worked
+                                to design a smaller number of flexible functions that could support a wide
+                                variety of operations and data structures. This approach not only reduced
+                                repetition throughout the codebase, but also made the system easier to
+                                expand and maintain as requirements evolved over time.
+                            </p>
+                            <p>
+                                In addition to client-specific development work, I also contributed to
+                                several internal company packages that are shared across multiple
+                                applications. Working on reusable packages changed the way I approached
+                                development because it required me to think beyond the immediate needs of a
+                                single application. Instead, I had to consider flexibility, maintainability,
+                                and how future developers would interact with the systems I was building.
+                                This work reinforced the importance of writing clean, adaptable, and
+                                well-documented code, especially when changes can affect several projects at
+                                once.
+                            </p>
+
+                            <p>
+                                This semester, I was also given the opportunity to work at the Canadian
+                                Nuclear Association conference. Conferences continue to be one of the most
+                                valuable opportunities for developing my communication and professional
+                                skills. Compared to previous terms, I felt significantly more comfortable
+                                engaging with prospective clients, discussing the company’s software, and
+                                participating in casual professional conversations. Attending the conference
+                                also allowed me to deepen my understanding of the Canadian nuclear industry
+                                and gain more insight into the challenges and priorities faced by many of
+                                our clients.
+                            </p>
+
+                            <p>
+                                One of the biggest areas of growth for me this semester was confidence. As I
+                                gained more experience working on increasingly complex systems, I found
+                                myself becoming more independent and less reliant on constant guidance from
+                                coworkers. Continuing to follow a structured self-review and code review
+                                process also helped improve the quality of my work. I noticed that fewer
+                                tickets were being returned to me for regressions or oversights, which
+                                reinforced the value of slowing down and approaching development more
+                                methodically.
+                            </p>
+
+                            <p>
+                                Overall, this term gave me valuable experience working on larger and more
+                                technically demanding systems while continuing to strengthen both my
+                                programming and professional communication skills. Looking back across my
+                                co-op experience so far, I can clearly see how much more confident and
+                                capable I have become as a developer. Each project this semester pushed me
+                                to think more critically, communicate more effectively, and take greater
+                                ownership over my work, and I am excited to continue building on those
+                                experiences in future work terms.
+                            </p>
+
+                            <p>
+                                I would like to thank the team at Avatara Software for their continued
+                                mentorship, support, and willingness to trust me with meaningful work and
+                                real client-facing responsibilities. Their guidance has played a major role
+                                in my growth throughout these work terms, and I am extremely grateful for
+                                the opportunities I have been given.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,8 +386,8 @@
         $(document).ready(function() {
               $('.header').load('/portfolio_website/partials/nav.html');
 
-            $(document).on('click', '#btnS24, #btnF24, #btnS25', function (e) {
-                $('.summer-2024-wtr, .fall-2024-wtr, .summer-2025-wtr').hide();
+            $(document).on('click', '#btnS24, #btnF24, #btnS25, #btnW26', function (e) {
+                $('.summer-2024-wtr, .fall-2024-wtr, .summer-2025-wtr, .winter-2026-wtr').hide();
 
                 if ($('#btnS24').is(':checked')) {
                     $('.summer-2024-wtr').show();
@@ -295,6 +395,8 @@
                     $('.fall-2024-wtr').show();
                 } else if ($('#btnS25').is(':checked')) {
                     $('.summer-2025-wtr').show();
+                } else if ($('#btnW26').is(':checked')) {
+                    $('.winter-2026-wtr').show();
                 }
             });
         });
